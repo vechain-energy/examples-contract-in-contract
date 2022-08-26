@@ -35,4 +35,9 @@ contract Factory {
     function listContracts() public view returns (address[] memory) {
         return contracts;
     }
+
+    function currentOwnerOf(address contractAddress) public view returns (address currentOwner) {
+        NFT testContract = NFT(contractAddress);
+        currentOwner = testContract.owner();
+    }
 }

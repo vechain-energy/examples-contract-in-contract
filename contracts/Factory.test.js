@@ -46,6 +46,16 @@ describe('Factory', () => {
     expect(list).toEqual([contractAddress1, contractAddress2])
   })
 
+  it('interacts with a given contract', async () => {
+    const Factory = await ethers.getContractFactory('Factory')
+    contractInstance = await Factory.deploy()
+
+    const contractAddress = await deployNewContract('name', 'symbol', user2)
+
+    const owner = await contractInstance.currentOwnerOf(contractAddress)
+    expect(owner).toEqual(user2.address)
+  })
+
   describe('NFT', () => {
     it('creates the new contract with correct name', async () => {
       const name = `${Math.random()}`
