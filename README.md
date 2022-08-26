@@ -119,7 +119,7 @@ $ node scripts/deploy-contract.js Factory
 
 ## Test
 
-Test `createContract` via vechain.energy API:
+Test `createContract("NFT Contract", "Symbol")` via vechain.energy API:
 
 ```shell
 $ curl -X POST https://sponsor-testnet.vechain.energy/by/115/transaction \
@@ -130,7 +130,7 @@ $ curl -X POST https://sponsor-testnet.vechain.energy/by/115/transaction \
 {"id":"0xee209e969c7019837854805db8b070a1e4817e0963dbbcb4865dee387c488402","url":"https://vethor-node-test.vechaindev.com/transactions/0xee209e969c7019837854805db8b070a1e4817e0963dbbcb4865dee387c488402?pending=true"}
 ```
 
-Read created contracts via vechain.energy API:
+Read created contracts owned by the deployer address via vechain.energy API using `listContractsFor(0x00a4e31340ca8565c65e047f050145094b0fbb8d)`:
 
 ```shell
 $ curl https://call.api.vechain.energy/test/0x23E128ADE86FAcF027453b8631Fa18A322A25E7B/listContractsFor%20(address%200x00a4e31340ca8565c65e047f050145094b0fbb8d)%20returns(address[]) -s | jq
