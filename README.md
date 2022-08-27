@@ -125,7 +125,7 @@ Test `createContract("NFT Contract", "Symbol")` via vechain.energy API:
 $ curl -X POST https://sponsor-testnet.vechain.energy/by/115/transaction \
   -H "X-API-Key: gqxao258sg.65fdb6ea8d8f634080fb65322f3170fed920b7dc4adc3f805ec023de07b27282" \
   -H "Content-Type: application/json" \
-  -d '{"clauses": [ "0x23E128ADE86FAcF027453b8631Fa18A322A25E7B.createContract(string NFT Contract, string Symbol" ]}'
+  -d '{"clauses": [ "0x23E128ADE86FAcF027453b8631Fa18A322A25E7B.createContract(string NFT Contract, string Symbol)" ]}'
 
 {"id":"0xee209e969c7019837854805db8b070a1e4817e0963dbbcb4865dee387c488402","url":"https://vethor-node-test.vechaindev.com/transactions/0xee209e969c7019837854805db8b070a1e4817e0963dbbcb4865dee387c488402?pending=true"}
 ```
